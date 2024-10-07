@@ -9,7 +9,6 @@
 
 html {
     display: flex;
-    
     flex-direction: column;
     align-items: center;
 }
@@ -17,7 +16,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: width;
 }
 
 header {
@@ -27,25 +26,13 @@ header {
     margin: 25px;
     justify-content: space-between;
 }
-header .menu_mobile{
-    display: none;
-}
-header .menu_desktop{
-    width: 50%;
-    min-width:350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-}
 header ul {
-    min-width: 350px;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 48px;
 }
-
 
 .hero {
     height: 565px;
@@ -88,20 +75,4 @@ header ul {
     top: 235px;
     height: 900px;
     width: 700px;
-}
-
-@media (max-width: 760px) {
-    header .menu_desktop{
-        display: none;
-    }
-    header .menu_mobile{
-        display: flex;
-        width: 50px;
-        align-items: center;
-        background-color: aqua;
-    }
-    .menu_mobile ul{
-        display: none;
-    }
-    
 }
