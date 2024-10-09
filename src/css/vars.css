@@ -4,3 +4,24 @@
     --font-light:#0b0b0b; 
     --font-dark:#ebebeb; 
 }
+
+@font-face {
+    font-family: BarlowCondensed_Bold;
+    src: url(/src/assets/fonts/Barlow_Condensed/BarlowCondensed-Bold.ttf);
+}
+
+@font-face {
+    font-family: BarlowCondensed_Medium;
+    src: url(/src/assets/fonts/Barlow_Condensed/BarlowCondensed-Medium.ttf);
+}
+
+@font-face {
+    font-family: OpenSans_Bold;
+    src: url(/src/assets/fonts/Open_Sans/OpenSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: OpenSans_Medium;
+    src: url(/src/assets/fonts/Open_Sans/OpenSans-Medium.ttf);
+}
+

@@ -1,4 +1,5 @@
 @import "./vars.css";
+
 * {
     margin: 0;
     padding: 0;
@@ -7,16 +8,12 @@
     text-decoration: none;
 }
 
-html {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 body {
     display: flex;
     flex-direction: column;
-    width: width;
+    width: 100%;
+    background-color: #020106;
+    overflow-y: hidden;
 }
 
 header {
@@ -27,52 +24,59 @@ header {
     justify-content: space-between;
 }
 
-header ul {
+header .menu_mobile{
+    display: none;
+}
+header .menu_desktop{
+    width: 50%;
+    min-width:350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation_link a {
+    color: aliceblue;
+    font-family: OpenSans_bold;
+}
+
+.navigation_link a:hover {
+    color: #003459;
+}
+
+.list_navigation {
+    min-width: 350px;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 48px;
 }
 
-.hero {
-    height: 565px;
-    margin: 50px;
+.logo {
+    width: 100px;
+    margin-left: 9%;
+}
+
+.temp-warning {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: gray;
-    overflow: clip;
+    gap: 25px;
 }
 
-.hero-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    gap: 50px;
-}
-
-.hero-text h1{
+.temp-warning h1 {
+    font-family: BarlowCondensed_Bold, sans-serif;
     font-size: 68px;
-    font-weight: bold;
-    color: white;
-    letter-spacing: 35px;
-    height: 0px;
-    margin-top: 15px;
+    color: #FFFEF8;
 }
 
-.hero-text h2{
-    font-size: 200px;
-    color: white;
-    height: 0px;
-    font-family: "Barlow Condensed", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.hero img {
-    position: relative;
-    top: 235px;
-    height: 900px;
-    width: 700px;
+.temp-warning p {
+    font-family: OpenSans_Medium;
+    font-size: 48px;
+    color: #FFFEF8;
+    text-align: center;
 }
