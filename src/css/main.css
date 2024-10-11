@@ -134,8 +134,19 @@ footer p {
     color: aliceblue;
 }
 
+@media (max-width: 950px){
+    .hero-text h1{
+        font-size: 7vw ;
+        letter-spacing: 5vw;
+    }
+    
+    .hero-text h2{
+        font-size: 21vw;
+        letter-spacing: 1.5vw;
+    }
+}
 
-@media (max-width: 760px) {
+@media (max-width: 860px) {
     header .menu_desktop{
         display: none;
     }
