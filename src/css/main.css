@@ -159,6 +159,9 @@ footer p {
     header .menu_mobile{
         transition: 0.3s width ease;
     }
+    header .openbtn{
+        display: block;
+    }
 
     header .active{
         display: flex;
