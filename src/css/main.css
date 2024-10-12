@@ -23,9 +23,6 @@ header {
     justify-content: space-between;
 }
 
-header .menu_mobile{
-    display: none;
-}
 header .menu_desktop{
     width: 50%;
     min-width:350px;
@@ -34,13 +31,13 @@ header .menu_desktop{
     align-items: center;
 }
 
+header .menu_mobile, header .openbtn{
+    display: none;
+}
+
 .navigation_link a {
     color: aliceblue;
     font-family: OpenSans_bold;
-}
-
-.navigation_link a:hover {
-    color: #003459;
 }
 
 .list_navigation {
@@ -49,6 +46,10 @@ header .menu_desktop{
     flex-direction: row;
     align-items: center;
     gap: 48px;
+}
+
+.openbtn{
+    display: none;
 }
 
 .logo {
@@ -133,7 +134,12 @@ footer {
 footer p {
     color: aliceblue;
 }
-
+.active{
+    display: flex;
+    width: 50%;
+    position: absolute;
+    background-color: red;
+}
 @media (max-width: 950px){
     .hero-text h1{
         font-size: 7vw ;
@@ -141,23 +147,51 @@ footer p {
     }
     
     .hero-text h2{
-        font-size: 21vw;
+        font-size: 20vw;
         letter-spacing: 1.5vw;
     }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 875px) {
     header .menu_desktop{
         display: none;
     }
     header .menu_mobile{
-        display: flex;
-        width: 50px;
-        align-items: center;
-        background-color: aqua;
+        transition: 0.3s width ease;
     }
-    .menu_mobile ul{
-        display: none;
+
+    header .active{
+        display: flex;
+        width: 25vw;
+        height: 100%;
+        z-index: 2;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #2b2a2d;
+    }
+    .active ul{
+        flex-direction: column;
+        min-width: 100px;
+    }
+    .menu_mobile{
+        color: white;
+    }
+    .openbtn{
+        display: inline-block;
+        width: 30px;
+        aspect-ratio: 1;
+        font-size: 20px;
+        border: 0;
+        background-color: #2b2a2d;
+        color: white;scale: 1;
+        transition: 0.2s scale ease;
+    }
+    
+    .openbtn:hover{
+        cursor: pointer;
+        scale: 1.2;
     }
     
 }
