@@ -27,38 +27,8 @@
             </ul>
         </nav>
 
-        <nav class="menu_mobile">
-            <ul class="list_navigation">
-                <li class="navigation_link">
-                    <a href="/index.html">Home</a>
-                </li>
-                <li class="navigation_link">
-                    <a href="/src/Pages/Contact.html">Contac</a>
-                </li>
-                <li class="navigation_link">
-                    <a href="/src/Pages/Team.html">Our Team</a>
-                </li>
-                <li class="navigation_link">
-                    <a href="/src/Pages/About.html">About Us</a>
-                </li>
-            </ul>
-        </nav>
-        
-    </header>
-
-    <section class="hero">
-        <div class="hero-text">
-            <h1>MISSÃO</h1>
-            <h2>PEREGRINO</h2>
-        </div>
-        <div class="planet-glow">
-            <img class="glow" src="src/assets/imgs/glow.webp" alt="glow">
-            <img class="planet" src="src/assets/imgs/terra.webp" alt="planeta-terra">
-        </div>
-    </section>
-
-    <footer>
-        <div>
+        <nav class="menu_mobile" id="menu_mobile">
+            <button class="openbtn" onclick="toggleNav()">X</button>
             <ul class="list_navigation">
                 <li class="navigation_link">
                     <a href="/index.html">Home</a>
@@ -73,8 +43,33 @@
                     <a href="/src/Pages/About.html">About Us</a>
                 </li>
             </ul>
+        </nav>
+        <button class="openbtn" onclick="toggleNav()">☰</button>
+
+        
+    </header>
+
+    <section class="hero" id="main">
+        <div class="hero-text">
+            <h1>MISSÃO</h1>
+            <h2>PEREGRINO</h2>
+        </div>
+        <div class="planet-glow">
+            <img class="glow" src="src/assets/imgs/glow.webp" alt="glow">
+            <img class="planet" src="src/assets/imgs/terra.webp" alt="planeta-terra">
+        </div>
+    </section>
+
+    <footer>
+        <div>
         </div>
         <p>&copy; 2024 Equipe do Projeto. Todos os direitos reservados.</p>
     </footer>
+    <script>
+        function toggleNav() {
+            const sidepanel = document.getElementById("menu_mobile");
+            sidepanel.classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
